@@ -1,0 +1,13 @@
+version: "3.9"
+services: 
+  serviceone: # name of the service
+    container_name: empserv # the container name in which the image will be loaded
+    ports:  # port from local mapped with the container 
+        - 9001:80
+    build: serviceone     # the folder from where the the dockerfile is read
+  
+  servicetwo:
+    container_name: deptserv
+    ports: 
+        - 9002:80
+    build: servicetwo
